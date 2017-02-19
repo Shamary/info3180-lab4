@@ -6,7 +6,7 @@
     {% for x in lst %}
     
         {% if "jpg" in x %}
-            <img src={{ url_for('static',filename="{{ x }}") }}></img>
+            <img src={{ url_for('static',filename="uploads/"+ x ) }} width="200px" height="300px"></img>
         {% else %}
             <li>{{ x }}</li>
         {% endif %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<ul>
+    {% for x in lst %}
+    
+        {% if "jpg" in x %}
+            <img src={{ url_for('static',filename="{{ x }}") }}></img>
+        {% else %}
+            <li>{{ x }}</li>
+        {% endif %}
+        
+    {% endfor %}
+</ul>
+
+{% endblock %}
